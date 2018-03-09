@@ -40,10 +40,25 @@ const theme = createTheme(
 
 
 const slidesImports = [
-  import("./slides/1"),
-  import("./slides/2"),
-  import("./slides/3"),
-  import("./slides/4")
+  import("./slides/0_intro/intro_1"),
+  import("./slides/0_intro/intro_2"),
+  import("./slides/0_intro/intro_3"),
+  import("./slides/1_jsgiven/jsgiven_1"),
+  import("./slides/1_jsgiven/jsgiven_2"),
+  import("./slides/1_jsgiven/jsgiven_3"),
+  import("./slides/1_jsgiven/jsgiven_4"),
+  import("./slides/1_jsgiven/jsgiven_5"),
+  import("./slides/2_jsverify/jsverify_1"),
+  import("./slides/2_jsverify/jsverify_2"),
+  import("./slides/2_jsverify/jsverify_3"),
+  import("./slides/2_jsverify/jsverify_4"),
+  import("./slides/2_jsverify/jsverify_5"),
+  import("./slides/3_stryker/stryker_1"),
+  import("./slides/3_stryker/stryker_2"),
+  import("./slides/3_stryker/stryker_3"),
+  import("./slides/3_stryker/stryker_4"),
+  import("./slides/3_stryker/stryker_5"),
+  import("./slides/4_end/conclusion"),
 ];
 
 export default class Presentation extends React.Component {
