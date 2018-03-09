@@ -1,0 +1,121 @@
+// @flow
+
+import { setupForRspec, scenarios, scenario, Stage } from 'js-given';
+
+import moment from '../../../../../../tech/time/moment';
+import { computeLoanRemaining } from './../../../main/quote-requester/loan-remaining';
+import {
+  NumberSpacingFormatter,
+  PercentageFormatter,
+} from '../../../../../../tech/js-given-tests/formatters';
+
+import type { Amount, Duration } from '../../../main/loan-types';
+
+setupForRspec(describe, it);
+
+class RemainingStage extends Stage {
+  loanAmount: Amount;
+  monthlyRate: number;
+  loanDuration: Duration;
+  currentDate: moment$Moment;
+  startDate: moment$Moment;
+
+  @NumberSpacingFormatter('loanAmount')
+  the_loan_amount_is_$_euros(loanAmount: number): this {
+    this.loanAmount = { value: loanAmount, currency: 'EUR' };
+    return this;
+  }
+
+  @PercentageFormatter('monthlyRate')
+  the_monthly_rate_is(monthlyRate: number): this {
+    this.monthlyRate = monthlyRate;
+    return this;
+  }
+
+  the_loan_duration_is_$_years(loanDuration: number): this {
+    this.loanDuration = { value: loanDuration, unit: 'YEARS' };
+    return this;
+  }
+
+  the_loan_start_date_is(startDate: string): this {
+    this.startDate = moment(startDate);
+    return this;
+  }
+
+  the_current_date_is(currentDate: string): this {
+    this.currentDate = moment(currentDate);
+    return this;
+  }
+
+  the_remaining_capital_is_$_euros(expectedRemainingCapital: number): this {
+    const loanRemaining = computeLoanRemaining(
+      this.currentDate,
+      this.startDate,
+      this.monthlyRate,
+      this.loanAmount,
+      this.loanDuration
+    );
+    expect(loanRemaining.amount.value).toBe(expectedRemainingCapital);
+    return this;
+  }
+
+  the_loan_duration_remaining_is_$_months(
+    expectedLoanDurationRemaining: number
+  ): this {
+    const loanRemaining = computeLoanRemaining(
+      this.currentDate,
+      this.startDate,
+      this.monthlyRate,
+      this.loanAmount,
+      this.loanDuration
+    );
+    expect(loanRemaining.duration.value).toBe(expectedLoanDurationRemaining);
+    return this;
+  }
+}
+
+scenarios(
+  'diagnosis.loan-quote.quote-requester.loan-remaining.index',
+  RemainingStage,
+  ({ given, when, then }) => ({
+    ['should compute the remaining capital']: scenario({}, () => {
+      given()
+        .the_current_date_is('2017-09-01')
+        .and()
+        .the_loan_start_date_is('2016-08-01')
+        .and()
+        .the_loan_amount_is_$_euros(240000)
+        .and()
+        .the_loan_duration_is_$_years(15)
+        .and()
+        .the_monthly_rate_is(1.2);
+      then()
+        .the_loan_duration_remaining_is_$_months(156)
+        .and()
+        .the_remaining_capital_is_$_euros(210426.16);
+    }),
+  })
+);
+
+scenarios(
+  'diagnosis.loan-quote.quote-requester.loan-remaining.index',
+  RemainingStage,
+  ({ given, when, then }) => ({
+    ['should compute the remaining capital of a new loan']: scenario({}, () => {
+      given()
+        .the_current_date_is('2017-09-01')
+        .and()
+        .the_loan_start_date_is('2017-10-01')
+        .and()
+        .the_loan_amount_is_$_euros(240000)
+        .and()
+        .the_loan_duration_is_$_years(15)
+        .and()
+        .the_monthly_rate_is(1.2);
+      then()
+        .the_loan_duration_remaining_is_$_months(180)
+        .and()
+        .the_remaining_capital_is_$_euros(240000);
+    }),
+  })
+);

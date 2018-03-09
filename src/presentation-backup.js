@@ -54,7 +54,21 @@ setInterval(() => {
   zzzzzzz`
 }, 1000);
 
+const CustomSlide = (
 
+  <CodeSlide
+    bgColor="secondary"
+    transition={['fade']}
+    lang="js"
+    code={code2}
+    ranges={[
+      { loc: [0, 5], title: 'Stateless Components' },
+      { loc: [3, 4], note: 'They are just functions that receive Props' },
+      { loc: [7, 8], note: 'They are just functionsxxx that receive Props' }
+    ]}
+    showLineNumbers={false}
+  />
+);
 
 export default class Presentation extends React.Component {
   constructor() {
@@ -98,6 +112,8 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
 
+       <CustomSlide/>
+
         <Slide transition={['zoom']} bgColor="primary">
           <Heading>DISCLAIMER</Heading>
         </Slide>
@@ -137,6 +153,7 @@ export default class Presentation extends React.Component {
                         <h4>logo</h4>
                         <h4> 3 amigos </h4>
                         <h4>photo fluo?</h4>
+                        <p>http://www.methodsandtools.com/archive/collaborativespecifications.php</p>
                     </Notes>
                 </Slide>
 
