@@ -1,9 +1,12 @@
 import React from "react";
-import { Heading, Notes, Slide } from "spectacle";
+import { Text, Notes, Slide, Image } from "spectacle";
 
 export default (
     <Slide transition={['zoom']} bgColor="primary">
-        <Heading>Un exemple ce n'est pas toujours suffisant</Heading>
+        <Text textColor="secondary" fit bold>
+        Un exemple c'est bien mais...
+        </Text>
+        <Image src="assets/ugly-duckling-690x300.jpg" />
     <Notes>
         <h4>photo un vilain petit canard</h4>
         <h4>A gauche un histogram - à droite du base64</h4>

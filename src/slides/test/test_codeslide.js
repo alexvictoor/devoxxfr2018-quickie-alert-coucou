@@ -1,7 +1,8 @@
 import React from "react";
 import { Heading, Slide, Text } from "spectacle";
 import CodeSlide from 'spectacle-code-slide';
-import code from 'raw-loader!../../../public/assets/code.js';
+//import code from 'raw-loader!../../../public/assets/code.js';
+const code = "HACK";
 export default (
     <CodeSlide
           bgColor="secondary"

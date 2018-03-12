@@ -1,11 +1,23 @@
 import React from "react";
 import { Heading, Notes, Slide } from "spectacle";
+import CodeSlide from 'spectacle-code-slide';
+import example from './eligibility.example'
 
 export default (
-<Slide transition={['zoom']} bgColor="primary">
-                    <Heading>TODO exemple de code fluo</Heading>
-                    <Notes>
-                        <h4>différence avec cucumber-js</h4>
-                    </Notes>
-                </Slide>
+    <CodeSlide
+          bgColor="secondary"
+          transition={['fade']}
+          lang="js"
+          code={example}
+          fit
+          ranges={[
+            { loc: [34, 40] },
+            { loc: [31, 40] },
+            { loc: [29, 40] },
+            { loc: [28, 40] },
+            { loc: [26, 40] },
+            { loc: [0, 22]},
+          ]}
+          showLineNumbers={true}
+        />
 );

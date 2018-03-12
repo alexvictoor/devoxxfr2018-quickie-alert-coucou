@@ -1,9 +1,15 @@
 import React from "react";
-import { Heading, Slide, Text, Notes } from "spectacle";
+import { Heading, Slide, Text, Notes, List, ListItem } from "spectacle";
 
 export default (
-    <Slide transition={['zoom']} bgColor="primary">
-     <Heading>DISCLAIMER</Heading>
+    <Slide transition={['zoom']} >
+     <Heading>MYSELF</Heading>
+     <List>
+        <ListItem>Alexandre Victoor</ListItem>
+        <ListItem>alexandre.victoor@fluo.com</ListItem>
+        <ListItem>@alex_victoor</ListItem>
+        <ListItem>https://github.com/alexvictoor</ListItem>
+    </List>
      <Notes>
         logo jest
         pas en parler
