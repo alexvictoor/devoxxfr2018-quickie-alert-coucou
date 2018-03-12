@@ -18,6 +18,7 @@ import {
 import CodeSlide from 'spectacle-code-slide';
 
 import hdrExample from './slides/2_jsverify/hdr.example'
+import hdrExampleJsc from './slides/2_jsverify/hdr.example.jsc'
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -71,6 +72,7 @@ const slidesImports = [
 ];
 
 const code9 = () => hdrExample()
+const code11 = () => hdrExampleJsc()
 
 export default class Presentation extends React.Component {
   constructor(props) {
@@ -114,6 +116,9 @@ export default class Presentation extends React.Component {
 
             if (index === 9 ) {
               return React.cloneElement(slide, {key: index, code: code9()});
+            }
+            if (index === 11 ) {
+              return React.cloneElement(slide, {key: index, code: code11()});
             }
             
             return React.cloneElement(slide, {key: index });
