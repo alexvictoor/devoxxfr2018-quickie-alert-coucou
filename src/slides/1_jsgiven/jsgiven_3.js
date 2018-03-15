@@ -1,5 +1,4 @@
 import React from "react";
-import { Heading, Notes, Slide } from "spectacle";
 import CodeSlide from 'spectacle-code-slide';
 import example from './eligibility.example'
 

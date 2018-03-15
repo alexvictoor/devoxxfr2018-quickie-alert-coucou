@@ -9,8 +9,9 @@ export default (
           </Text>
         <Image src="assets/Beetle-Final.jpg" />
         <Notes>
-            <h4>TODO image d'un bug</h4>
             <h4>on a fait du refactoring,, on reprend duc ode legacy</h4>
+            <p>bug stryker cli sur du typescript, bug jest si pas de config, bug avec moment</p>
+            <p>never trust a passing test</p>
         </Notes>
     </Slide>
 

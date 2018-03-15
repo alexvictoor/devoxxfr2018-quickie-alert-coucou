@@ -1,9 +1,9 @@
 import React from "react";
-import { Heading, Notes, Slide } from "spectacle";
+import { Heading, Notes, Slide, Image } from "spectacle";
 
 export default (
     <Slide transition={['zoom']} bgColor="primary">
-                    <Heading>TODO screenshot report</Heading>
+                    <Image src="assets/stryker-report.png" />
                     
                 </Slide>
 

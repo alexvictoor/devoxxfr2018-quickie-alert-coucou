@@ -1,13 +1,26 @@
 import React from "react";
-import { Heading, Notes, Slide } from "spectacle";
+import CodeSlide from 'spectacle-code-slide';
+import example from './age.example'
 
 export default (
-    <Slide transition={['zoom']} bgColor="primary">
-                    <Heading>TODO exemple de code qui change - on insert des bugs - label build vert ou build rouge</Heading>
-                    <Notes>
-                        <h4>ce que l'o,n aimerait faire...</h4>
-                    </Notes>
-                </Slide>
+
+    <CodeSlide
+          bgColor="secondary"
+          transition={['fade']}
+          lang="typescript"
+          code={example}
+ 
+          ranges={[
+            { loc: [0, 4] },
+            { loc: [0, 7] },
+            { loc: [0, 9] },
+            { loc: [0, 11] },
+            { loc: [0, 20] },
+            
+          ]}
+          showLineNumbers={true}
+        />
+
 
 
 );

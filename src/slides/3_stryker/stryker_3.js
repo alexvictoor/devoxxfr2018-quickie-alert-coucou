@@ -9,6 +9,11 @@ export default (
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
               Mutation Testing
           </Text>
+          <Notes>
+            <h4>outil open source qui gère maintenant le typescript 
+                qui s'intègre bien avec les tests runners et fwk de test. 
+                Pas très compliqué à installer</h4>
+        </Notes>
                 </Slide>
 
 
