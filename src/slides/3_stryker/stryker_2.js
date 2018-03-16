@@ -15,7 +15,7 @@ export default (
             { loc: [0, 7] },
             { loc: [0, 9] },
             { loc: [0, 11] },
-            { loc: [0, 20] },
+            { loc: [0, 19] },
             
           ]}
           showLineNumbers={true}

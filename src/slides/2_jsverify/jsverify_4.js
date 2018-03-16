@@ -13,6 +13,7 @@ export default (
           code={example(random1, random2, random3, random4)}
           fit
           ranges={[
+            { loc: [13, 24] },
             { loc: [5, 24] },
             { loc: [0, 6] },
           ]}

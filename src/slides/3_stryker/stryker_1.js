@@ -11,7 +11,7 @@ export default (
         <Notes>
             <h4>on a fait du refactoring,, on reprend duc ode legacy</h4>
             <p>bug stryker cli sur du typescript, bug jest si pas de config, bug avec moment</p>
-            <p>never trust a passing test</p>
+            <p>Never trust a test you haven’t personally seen fail</p>
         </Notes>
     </Slide>
 

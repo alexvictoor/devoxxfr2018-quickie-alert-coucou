@@ -11,15 +11,13 @@ export default (`function isAgeBelowThreshold(
   return ageWhenLoanEnds <= threshold;
 }
 
-it('works', () => {
-  expect(
-    isAgeBelowThreshold(
-      '06/01/1990', 
-      moment().year(2025), 
-      40
-    )
-  ).toBe(true);
-});
+expect(
+  isAgeBelowThreshold(
+    '06/01/1990', 
+    moment().year(2025), 
+    40
+  )
+).toBe(true);
 
 
 

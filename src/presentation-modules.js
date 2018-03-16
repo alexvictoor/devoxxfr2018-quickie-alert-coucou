@@ -66,7 +66,10 @@ const slidesImports = [
   import("./slides/3_stryker/stryker_1"),
   import("./slides/3_stryker/stryker_2"),
   import("./slides/3_stryker/stryker_3"),
-  import("./slides/3_stryker/stryker_4"),
+  import("./slides/3_stryker/stryker_4a"),
+  import("./slides/3_stryker/stryker_4b"),
+  import("./slides/3_stryker/stryker_4c"),
+  import("./slides/3_stryker/stryker_4d"),
   import("./slides/3_stryker/stryker_5"),
   import("./slides/4_end/conclusion"),
 ];
@@ -110,7 +113,7 @@ export default class Presentation extends React.Component {
   render() {
     const { slides } = this.state;
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="number">
         {
           slides.map((slide, index) => {
 
