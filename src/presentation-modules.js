@@ -17,8 +17,8 @@ import {
 
 import CodeSlide from 'spectacle-code-slide';
 
-import hdrExample from './slides/2_jsverify/hdr.example'
-import hdrExampleJsc from './slides/2_jsverify/hdr.example.jsc'
+import code9 from './slides/2_jsverify/hdr.example'
+import code11 from './slides/2_jsverify/hdr.example.jsc'
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -64,6 +64,7 @@ const slidesImports = [
   import("./slides/2_jsverify/jsverify_4"),
   import("./slides/2_jsverify/jsverify_5"),
   import("./slides/3_stryker/stryker_1"),
+  import("./slides/3_stryker/stryker_1b"),
   import("./slides/3_stryker/stryker_2"),
   import("./slides/3_stryker/stryker_3"),
   import("./slides/3_stryker/stryker_4a"),
@@ -74,15 +75,20 @@ const slidesImports = [
   import("./slides/4_end/conclusion"),
 ];
 
-const code9 = () => hdrExample()
-const code11 = () => hdrExampleJsc()
+const codeSamples = {
+  9: code9,
+  11: code11,
+}
+
+localStorage.clear();
 
 export default class Presentation extends React.Component {
   constructor(props) {
     super(props);
+    this.startTicker = this.startTicker.bind(this);
+    this.stopTicker = this.stopTicker.bind(this);
 
     this.state = {
-      code: "code from state",
       slides: Array(slidesImports.length).fill(<Slide key="loading" />)
     };
   }
@@ -94,37 +100,39 @@ export default class Presentation extends React.Component {
         importedSlides.push(slide.default);
       });
       this.setState({ slides: importedSlides });
-      setInterval(() => {
-        const now = new Date();
-        this.setState({code: `coucou ${now}
-        sss
-        s
-        s
-        s
-        s
-        s
-        s
-        s
-        zzzzzzz`});
-      }, 1000);
+      
     });
+  }
+
+  startTicker() {
+    if (!this.ticker) {
+      this.ticker = setInterval(() => {
+        const now = new Date();
+        console.log("tick tick");
+        this.setState({tick: now});
+      }, 300);
+    }
+  }
+
+  stopTicker() {
+    if (this.ticker) {
+      clearInterval(this.ticker);
+      this.ticker = undefined;
+    }
   }
 
   render() {
     const { slides } = this.state;
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="number">
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         {
           slides.map((slide, index) => {
 
-            if (index === 9 ) {
-              return React.cloneElement(slide, {key: index, code: code9()});
-            }
-            if (index === 11 ) {
-              return React.cloneElement(slide, {key: index, code: code11()});
+            if (codeSamples[index]) {
+              return React.cloneElement(slide, {key: index, code: codeSamples[index](), onActive: this.startTicker});
             }
             
-            return React.cloneElement(slide, {key: index });
+            return React.cloneElement(slide, {key: index, onActive: this.stopTicker });
           })
         }
       </Deck>

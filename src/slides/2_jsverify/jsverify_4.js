@@ -1,8 +1,5 @@
 import React from "react";
 import CodeSlide from 'spectacle-code-slide';
-import example from './hdr.example.jsc'
-
-let random1, random2, random3, random4 = 42;
 
 export default (
 
@@ -10,7 +7,7 @@ export default (
           bgColor="secondary"
           transition={['fade']}
           lang="js"
-          code={example(random1, random2, random3, random4)}
+          code="Loading..."
           fit
           ranges={[
             { loc: [13, 24] },

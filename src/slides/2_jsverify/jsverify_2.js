@@ -10,7 +10,7 @@ export default (
           bgColor="secondary"
           transition={['fade']}
           lang="js"
-          code={example(random1, random2, random3, random4)}
+          code="Loading..."
           fit
           ranges={[
             { loc: [0, 5] },

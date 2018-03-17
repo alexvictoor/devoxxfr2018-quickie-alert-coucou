@@ -49,5 +49,3 @@ const randomInt = () => (
 const randomPercentile = () => (
     (50 + Math.floor(Math.random() * 50)) + "." +  Math.floor(Math.random() * 1000) 
 )
-
-//(), randomInt(), randomInt(), randomPercentile()

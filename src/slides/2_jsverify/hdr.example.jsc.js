@@ -2,8 +2,8 @@ export default (random1 = randomInt(), random2  = randomInt(), random3 = randomI
 `import * as jsc from "jsverify";
 
 const property = jsc.check(jsc.forall(
-  jsc.array(jsc.nat), 
-  jsc.integer(50, 100), 
+  jsc.array(jsc.nat),   // [ ${random1}, ${random2}... ]
+  jsc.number(50, 100),  // ${random4}
   (numbers: number[], percentile: number) => {
     
     // given
@@ -34,7 +34,7 @@ let index = 0
 const randomInt = () => (
     (index++ % 5 === 0) ?
     Math.floor(Math.random() * 1000)
-    : Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+    : Math.floor(Math.random() * 100000)
 )
 
 const randomPercentile = () => (
