@@ -1,0 +1,2 @@
+webpackJsonp([20],{958:function(e,t,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=l(0),a=l.n(n),o=l(122);l.n(o);t.default=a.a.createElement(o.Slide,{transition:["zoom"],bgColor:"primary",bgImage:"assets/jest.png"},a.a.createElement(o.Notes,null,a.a.createElement("h4",null,"Slide notes"),a.a.createElement("ol",null,a.a.createElement("li",null,"TODO contenu fluo"))))}});
+//# sourceMappingURL=20.cc0183ee.chunk.js.map

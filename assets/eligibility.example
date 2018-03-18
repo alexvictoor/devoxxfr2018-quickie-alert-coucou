@@ -1,0 +1,69 @@
+//@flow
+
+import moment from '../../../../../../tech/time/moment';
+import { scenario, scenarios, setupForRspec, Stage } from 'js-given';
+import {
+  isEligibleToHamon,
+  isEligibleToBourquin,
+  isNewLoan,
+} from '../../../main/quote-requester/loan-remaining/eligibility';
+
+setupForRspec(describe, it);
+
+class EligibilityStage extends Stage {
+  loanDate: string;
+  currentDate: string;
+
+  the_loan_start_date_is(loanDate: string) {
+    this.loanDate = loanDate;
+    return this;
+  }
+
+  the_current_date_is(currentDate: string) {
+    this.currentDate = currentDate;
+    return this;
+  }
+
+  the_loan_is_eligible_to_bourquin_law() {
+    expect(
+      isEligibleToBourquin(moment(this.loanDate), moment(this.currentDate))
+    ).toBe(true);
+    return this;
+  }
+
+  the_loan_is_not_eligible_to_bourquin_law() {
+    expect(
+      isEligibleToBourquin(moment(this.loanDate), moment(this.currentDate))
+    ).toBe(false);
+    return this;
+  }
+}
+
+scenarios(
+  'diagnosis.loan-quote.quote-requester.loan-remaining.remaining-capital.eligibility',
+  EligibilityStage,
+  ({ given, when, then }) => ({
+    ['should be eligible to Bourquin when loan has started for over a year']: scenario(
+      {},
+      () => {
+        given()
+          .the_current_date_is('2017-01-01');
+        when()
+          .the_loan_starts_on('2016-01-01');
+        then()
+          .the_loan_is_eligible_to_bourquin_law();
+      }
+    ),
+    ['should be eligible to Bourquin when loan has started for less than a year']: scenario(
+      {},
+      () => {
+        given()
+          .the_current_date_is('2017-01-01');
+        when()
+          .the_loan_starts_on('2016-12-01');
+        then()
+          .the_loan_is_not_eligible_to_bourquin_law();
+      }
+    ),
+  })
+);
