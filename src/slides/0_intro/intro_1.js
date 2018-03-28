@@ -11,7 +11,7 @@ export default (
           </Text>
           <Notes>
               <h4>But du talk vous faire dévouvrir 3 pratiques et 3 outils qui gagnent à être connus</h4>
-              <h4> Programme va être dense, BDD, property based testing et du mutation testing </h4>
+              <h4>Un programme assez ambition car on va découvrir ensemble 3 outils, 3 pratiques de tests. Je risque d'aller assez vite;, mais bn'hésitez pas à me poser des questions</h4>
           </Notes>
         </Slide>
 );

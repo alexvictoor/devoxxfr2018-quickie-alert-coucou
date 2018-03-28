@@ -11,8 +11,7 @@ export default (
         <ListItem>https://github.com/alexvictoor</ListItem>
     </List>
      <Notes>
-        logo jest
-        pas en parler
+
         projets peu connus, peu d'étoiles ça va être rapide
     </Notes>
     </Slide>

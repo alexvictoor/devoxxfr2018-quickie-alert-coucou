@@ -17,8 +17,8 @@ import {
 
 import CodeSlide from 'spectacle-code-slide';
 
-import code9 from './slides/2_jsverify/hdr.example'
-import code11 from './slides/2_jsverify/hdr.example.jsc'
+import code8 from './slides/2_jsverify/hdr.example'
+import code10 from './slides/2_jsverify/hdr.example.jsc'
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -47,7 +47,7 @@ const theme = createTheme(
 const slidesImports = [
   import("./slides/0_intro/intro_1"),
   import("./slides/0_intro/intro_2"),
-  import("./slides/0_intro/intro_3"),
+  //import("./slides/0_intro/intro_3"),
   
   import("./slides/1_jsgiven/jsgiven_1"),
   import("./slides/1_jsgiven/jsgiven_2"),
@@ -72,12 +72,13 @@ const slidesImports = [
   import("./slides/3_stryker/stryker_4c"),
   import("./slides/3_stryker/stryker_4d"),
   import("./slides/3_stryker/stryker_5"),
+  import("./slides/3_stryker/stryker_5b"),
   import("./slides/4_end/conclusion"),
 ];
 
 const codeSamples = {
-  9: code9,
-  11: code11,
+  8: code8,
+  10: code10,
 }
 
 localStorage.clear();

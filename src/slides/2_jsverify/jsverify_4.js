@@ -10,9 +10,11 @@ export default (
           code="Loading..."
           fit
           ranges={[
-            { loc: [13, 24] },
-            { loc: [5, 24] },
-            { loc: [0, 6] },
+            { loc: [12, 21] },
+            { loc: [6, 21] },
+            { loc: [4, 21] },
+            { loc: [3, 21] },
+            { loc: [0, 18] },
           ]}
           showLineNumbers={true}
         />

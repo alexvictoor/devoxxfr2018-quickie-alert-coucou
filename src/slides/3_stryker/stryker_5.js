@@ -1,11 +1,26 @@
 import React from "react";
-import { Heading, Notes, Slide, Image } from "spectacle";
+import CodeSlide from 'spectacle-code-slide';
+import example from './age.example'
 
 export default (
-    <Slide transition={['zoom']} bgColor="primary">
-                    <Image src="assets/stryker-report.png" />
-                    
-                </Slide>
+
+    <CodeSlide
+          bgColor="secondary"
+          transition={['fade']}
+          lang="typescript"
+          code={example}
+ 
+          ranges={[
+            { loc: [0, 4] },
+            { loc: [0, 7] },
+            { loc: [0, 9] },
+            { loc: [0, 11] },
+            { loc: [0, 19] },
+            
+          ]}
+          showLineNumbers={true}
+        />
+
 
 
 );

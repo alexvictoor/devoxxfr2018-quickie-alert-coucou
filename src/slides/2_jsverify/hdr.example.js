@@ -11,9 +11,9 @@ const decoded = decode(encoded);
 
 // then
 expect(
-  decoded.getValueAtPercentile(50)
-).to.equal(
-  histogram.getValueAtPercentile(50)
+  decoded
+).to.deep.equal(
+  histogram
 );
 
 
@@ -30,9 +30,9 @@ const decoded = decode(encoded);
 
 // then
 expect(
-  decoded.getValueAtPercentile(${random4})
-).to.equal(
-  histogram.getValueAtPercentile(${random4})
+  decoded
+).to.deep.equal(
+  histogram
 );
                                             ;
 `

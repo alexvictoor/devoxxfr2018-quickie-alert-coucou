@@ -3,8 +3,7 @@ export default (random1 = randomInt(), random2  = randomInt(), random3 = randomI
 
 const property = jsc.check(jsc.forall(
   jsc.array(jsc.nat),   // [ ${random1}, ${random2}... ]
-  jsc.number(50, 100),  // ${random4}
-  (numbers: number[], percentile: number) => {
+  (numbers: number[]) => {
     
     // given
     const histogram = hdr.build();
@@ -17,15 +16,11 @@ const property = jsc.check(jsc.forall(
     const decoded = decode(encoded);
     
     // then
-    const actual = 
-      decoded.getValueAtPercentile(centile)
-    const expected = 
-      histogram.getValueAtPercentile(centile)
-    return actual === expected;
+    return deepEqual(actual, expected);
   }
 ));
 expect(property).to.be.true;
-                                            ;
+                                                       ;
 `
 
 )
