@@ -66,6 +66,7 @@ const slidesImports = [
   import("./slides/3_stryker/stryker_1"),
   import("./slides/3_stryker/stryker_1b"),
   import("./slides/3_stryker/stryker_2"),
+  import("./slides/3_stryker/stryker_5"),
   import("./slides/3_stryker/stryker_3"),
   import("./slides/3_stryker/stryker_4a"),
   import("./slides/3_stryker/stryker_4b"),

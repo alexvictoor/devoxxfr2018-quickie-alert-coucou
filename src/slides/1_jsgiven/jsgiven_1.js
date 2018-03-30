@@ -3,6 +3,7 @@ import { Heading, Notes, Slide, Image, Text } from "spectacle";
 
 export default (
     <Slide transition={['zoom']} bgColor="primary">
+        <Heading textColor="secondary" textFont="Times New Roman">I</Heading>
         <Image src="assets/speccollab2.gif" width="90%" />
         <Text>
             Credit: Gojko Adzic

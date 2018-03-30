@@ -1,9 +1,10 @@
 import React from "react";
-import { Text, Notes, Slide, Image } from "spectacle";
+import { Heading, Text, Notes, Slide, Image } from "spectacle";
 
 export default (
     <Slide transition={['zoom']} bgColor="primary">
-        <Text textColor="secondary" fit bold>
+        <Heading textColor="secondary" textFont="Times New Roman">II</Heading>
+        <Text textColor="tertiary" fit bold>
         Un exemple c'est bien mais...
         </Text>
         <Image src="assets/ugly-duckling-690x300.jpg" />

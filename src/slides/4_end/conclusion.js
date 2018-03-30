@@ -7,10 +7,10 @@ export default (
            THE END
           </Heading>
           <List >
-
             <ListItem>jsGiven : <Link textColor="tertiary">https://jsgiven.org</Link></ListItem>
             <ListItem>jsVerify : <Link textColor="tertiary">https://jsverify.github.io</Link></ListItem>
             <ListItem>Stryker : <Link textColor="tertiary">https://stryker-mutator.io</Link></ListItem>
+            <ListItem>Les 'slides' : <Link textColor="tertiary">https://bit.ly/2uBGJxs</Link></ListItem>
           </List>
         
           <Notes>
