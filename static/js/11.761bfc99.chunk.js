@@ -1,2 +1,0 @@
-webpackJsonp([11],{972:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=a(0),l=a.n(n),o=a(122);a.n(o);t.default=l.a.createElement(o.Slide,{bgColor:"secondary",transition:["fade"]},l.a.createElement(o.BlockQuote,null,l.a.createElement(o.Quote,{textSize:52},"Never trust a test you haven\u2019t personally seen fail")))}});
-//# sourceMappingURL=11.761bfc99.chunk.js.map

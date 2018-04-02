@@ -1,2 +1,0 @@
-webpackJsonp([4],{980:function(e,n,a){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var t=a(0),l=a.n(t),r=a(414),o=a.n(r),s=a(122);a.n(s);n.default=l.a.createElement(o.a,{bgColor:"secondary",transition:["fade"],lang:"typescript",code:"Loading...",ranges:[{loc:[0,19]}],showLineNumbers:!0},l.a.createElement(s.Notes,null,l.a.createElement("p",null,"l'utilisateur n\xe9 en 1990 aura-t-il moins de 40 ans en 2025")))}});
-//# sourceMappingURL=4.5523a0d4.chunk.js.map

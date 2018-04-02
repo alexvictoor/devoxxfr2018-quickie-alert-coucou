@@ -1,0 +1,2 @@
+webpackJsonp([3],{979:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=r(0),n=r.n(a),o=r(122);r.n(o);t.default=n.a.createElement(o.Slide,{transition:["zoom"],bgColor:"primary",bgImage:"assets/stryker-report.png",bgSize:"90%",bgRepeat:"no-repeat"})}});
+//# sourceMappingURL=3.7af49706.chunk.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([4],{978:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=a(0),r=a.n(n),i=a(122);a.n(i);t.default=r.a.createElement(i.Slide,{transition:["fade"],transitionDuration:1},r.a.createElement(i.Heading,{size:1,caps:!0,lineHeight:1,textColor:"secondary"},"Stryker"),r.a.createElement(i.Image,{src:"assets/stryker4.png",height:"200%"}))}});
+//# sourceMappingURL=4.8dc4c99a.chunk.js.map
