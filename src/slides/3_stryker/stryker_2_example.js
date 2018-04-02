@@ -1,7 +1,6 @@
 import React from "react";
 import CodeSlide from 'spectacle-code-slide';
 import { Heading, Notes, Slide, Image, Appear } from "spectacle";
-import example from './age.example'
 
 export default (
 
@@ -9,7 +8,7 @@ export default (
           bgColor="secondary"
           transition={['fade']}
           lang="typescript"
-          code={example()}
+          code="Loading..."
  
           ranges={[
             { loc: [0, 4] },

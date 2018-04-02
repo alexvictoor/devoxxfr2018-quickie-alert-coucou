@@ -12,7 +12,7 @@ export default (
             <Heading>MYSELF</Heading>
            
             <Text textAlign="left" margin="30px">Alexandre Victoor</Text>
-            <Text textAlign="left" margin="30px">@alex_victoor</Text>
+            <Text textAlign="left" margin="30px">@Alex_Victoor</Text>
             <Text textAlign="left" margin="30px">github.com/alexvictoor</Text>
             <Text textAlign="left" margin="30px">&nbsp;</Text>
             <Image src="assets/fluo_logo.png" margin="40px 40 px" />

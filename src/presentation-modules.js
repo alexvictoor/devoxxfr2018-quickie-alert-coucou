@@ -19,7 +19,7 @@ import CodeSlide from 'spectacle-code-slide';
 
 import code8 from './slides/2_jsverify/hdr.example'
 import code10 from './slides/2_jsverify/hdr.example.jsc'
-import code23 from './slides/3_stryker/age.example'
+import code15 from './slides/3_stryker/age.example'
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -60,25 +60,23 @@ const slidesImports = [
   import("./slides/2_jsverify/jsverify_4"),
   import("./slides/2_jsverify/jsverify_5"),
   import("./slides/3_stryker/stryker_1"),
-  import("./slides/3_stryker/stryker_1b"),
   import("./slides/3_stryker/stryker_2"),
   import("./slides/3_stryker/stryker_2b"),
   import("./slides/3_stryker/stryker_2_example"),
   import("./slides/3_stryker/stryker_3"),
+  import("./slides/3_stryker/stryker_3b"),
   import("./slides/3_stryker/stryker_4a"),
   import("./slides/3_stryker/stryker_4b"),
   import("./slides/3_stryker/stryker_4c"),
   import("./slides/3_stryker/stryker_4d"),
-  import("./slides/3_stryker/stryker_5_0"),
-  import("./slides/3_stryker/stryker_5_example"),
-  import("./slides/3_stryker/stryker_5b"),
+  import("./slides/3_stryker/stryker_6"),
   import("./slides/4_end/conclusion"),
 ];
 
 const codeSamples = {
   8: code8,
   10: code10,
-  23: code23,
+  15: code15,
 }
 
 localStorage.clear();

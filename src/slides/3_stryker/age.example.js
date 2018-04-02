@@ -35,8 +35,8 @@ const format ='DD/MM/YYYY';
 let index = 0
 const genFormat = () => {
   index++;
-  if (index > 8) {
-    const i = format.length - (Math.floor((index -9)/2) % format.length); 
+  if (index > 24) {
+    const i = format.length - (Math.floor((index - 25)/2) % format.length); 
     return format.slice(0, i) + '🐛'
   }
   return format;
