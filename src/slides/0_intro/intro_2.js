@@ -1,15 +1,24 @@
 import React from "react";
-import { Heading, Slide, Text, Notes, List, ListItem } from "spectacle";
+import { Heading, Slide, Text, Notes, List, ListItem, Layout, Fill, Fit, Image } from "spectacle";
 
 export default (
     <Slide transition={['zoom']} >
-     <Heading>MYSELF</Heading>
-     <List>
-        <ListItem>Alexandre Victoor</ListItem>
-        <ListItem>alexandre.victoor@fluo.com</ListItem>
-        <ListItem>@alex_victoor</ListItem>
-        <ListItem>https://github.com/alexvictoor</ListItem>
-    </List>
+     <Layout>
+         <Fill>
+             <Image src="assets/fluo_diag.png" />
+             
+         </Fill>
+         <Fill>
+            <Heading>MYSELF</Heading>
+           
+            <Text textAlign="left" margin="30px">Alexandre Victoor</Text>
+            <Text textAlign="left" margin="30px">@alex_victoor</Text>
+            <Text textAlign="left" margin="30px">github.com/alexvictoor</Text>
+            <Text textAlign="left" margin="30px">&nbsp;</Text>
+            <Image src="assets/fluo_logo.png" margin="40px 40 px" />
+         </Fill>
+    </Layout>
+     
      <Notes>
 
         projets peu connus, peu d'étoiles ça va être rapide

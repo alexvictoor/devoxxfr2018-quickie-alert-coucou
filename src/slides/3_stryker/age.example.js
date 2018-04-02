@@ -1,11 +1,11 @@
 
-export default (`function isAgeBelowThreshold(
+export default (format = genFormat()) => (`function isAgeBelowThreshold(
   rawBirthdate: string, 
   loanEndDate: Moment, 
   threshold: number) {
 
   const birthdate 
-    = moment(rawBirthdate, 'DD/MM/YYYY');
+    = moment(rawBirthdate, '${format}');
   const ageWhenLoanEnds 
     = loanEndDate.diff(birthdate, 'year');
   return ageWhenLoanEnds <= threshold;
@@ -18,7 +18,7 @@ expect(
     40
   )
 ).toBe(true);
-
+                                               .
 
 
 
@@ -30,3 +30,14 @@ expect(
 
 
 `);
+
+const format ='DD/MM/YYYY';
+let index = 0
+const genFormat = () => {
+  index++;
+  if (index > 8) {
+    const i = format.length - (Math.floor((index -9)/2) % format.length); 
+    return format.slice(0, i) + '🐛'
+  }
+  return format;
+}

@@ -19,6 +19,7 @@ import CodeSlide from 'spectacle-code-slide';
 
 import code8 from './slides/2_jsverify/hdr.example'
 import code10 from './slides/2_jsverify/hdr.example.jsc'
+import code23 from './slides/3_stryker/age.example'
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -44,19 +45,14 @@ const theme = createTheme(
 );
 
 
+
 const slidesImports = [
   import("./slides/0_intro/intro_1"),
   import("./slides/0_intro/intro_2"),
-  //import("./slides/0_intro/intro_3"),
-  
   import("./slides/1_jsgiven/jsgiven_1"),
   import("./slides/1_jsgiven/jsgiven_2"),
-
   import("./slides/1_jsgiven/jsgiven_3"),
-  
   import("./slides/1_jsgiven/jsgiven_4"),
-
-
   import("./slides/2_jsverify/jsverify_1a"),
   import("./slides/2_jsverify/jsverify_1b"),
   import("./slides/2_jsverify/jsverify_2"),
@@ -66,13 +62,15 @@ const slidesImports = [
   import("./slides/3_stryker/stryker_1"),
   import("./slides/3_stryker/stryker_1b"),
   import("./slides/3_stryker/stryker_2"),
-  import("./slides/3_stryker/stryker_5"),
+  import("./slides/3_stryker/stryker_2b"),
+  import("./slides/3_stryker/stryker_2_example"),
   import("./slides/3_stryker/stryker_3"),
   import("./slides/3_stryker/stryker_4a"),
   import("./slides/3_stryker/stryker_4b"),
   import("./slides/3_stryker/stryker_4c"),
   import("./slides/3_stryker/stryker_4d"),
-  import("./slides/3_stryker/stryker_5"),
+  import("./slides/3_stryker/stryker_5_0"),
+  import("./slides/3_stryker/stryker_5_example"),
   import("./slides/3_stryker/stryker_5b"),
   import("./slides/4_end/conclusion"),
 ];
@@ -80,6 +78,7 @@ const slidesImports = [
 const codeSamples = {
   8: code8,
   10: code10,
+  23: code23,
 }
 
 localStorage.clear();
