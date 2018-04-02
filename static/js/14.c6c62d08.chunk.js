@@ -1,0 +1,2 @@
+webpackJsonp([14],{970:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=a(0),r=a.n(n),i=a(122);a.n(i);t.default=r.a.createElement(i.Slide,{transition:["fade"]},r.a.createElement(i.Text,{margin:"10px 0 0",textColor:"tertiary",fit:!0,bold:!0},"100% TEST COVERAGE ?"))}});
+//# sourceMappingURL=14.c6c62d08.chunk.js.map

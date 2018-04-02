@@ -1,0 +1,2 @@
+webpackJsonp([13],{971:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n(0),l=n.n(a),o=n(122);n.n(o);t.default=l.a.createElement(o.Slide,{bgColor:"secondary",transition:["fade"]},l.a.createElement(o.BlockQuote,null,l.a.createElement(o.Quote,{textSize:52},"Testing shows the presence, not the absence of bugs."),l.a.createElement(o.Cite,null,"Edsger W. Dijkstra")))}});
+//# sourceMappingURL=13.82db6d62.chunk.js.map

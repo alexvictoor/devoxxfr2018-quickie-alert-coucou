@@ -1,0 +1,2 @@
+webpackJsonp([12],{973:function(e,n,a){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var t=a(0),l=a.n(t),o=a(414),c=a.n(o),r=a(122),s=(a.n(r),a(416));n.default=l.a.createElement(c.a,{bgColor:"secondary",transition:["fade"],lang:"typescript",code:Object(s.a)(),ranges:[{loc:[0,4]},{loc:[0,7]},{loc:[0,9]},{loc:[0,11]},{loc:[0,19]}],showLineNumbers:!0},l.a.createElement(r.Notes,null,l.a.createElement("p",null,"l'utilisateur n\xe9 en 1990 aura-t-il moins de 40 ans en 2025")))}});
+//# sourceMappingURL=12.50f656b3.chunk.js.map
